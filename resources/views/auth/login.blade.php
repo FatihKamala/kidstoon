@@ -14,7 +14,7 @@ font-family: gamelan;
 .form{
   margin: 10px;
   padding: 5%;
-  margin-left:2%; 
+  margin-left:2%;
   position: center;
   border-radius: 40px;
   background: #FFF9B1;
@@ -81,7 +81,7 @@ p {
         <section class ="header" id="header">
           <h1>KIDSTOON</h1>
           <h5>Sistem hiburan berbasis edukasi</h5>
-        </section> 
+        </section>
     </div>
 
 
@@ -90,7 +90,7 @@ p {
         <section class="form" id="form">
         </section>
       </div>
-  
+
       <div class="col-xs-6 col-md-4">
         <section class="form" id="form">
           <form class="form-signin" action="{{ route('login') }}" method="post">
@@ -119,13 +119,10 @@ p {
       </div>
 
       <div class="col-xs-6 col-md-4"><section class="form" id="form">
-         <form action="daftar.php" method="post">
-            <p>Tidak Punya Akun?</p>
-            <button type="submit" class="button" value="REGISTER">
-                @if (Route::has('register'))
-                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                @endif</button>
-        </form>
+          <p>Tidak Punya Akun?</p>
+          <div class="button">
+              <a href="/register">REGISTER</a>
+          </div>
         </section>
       </div>
     </div>

@@ -14,7 +14,7 @@ font-family: gamelan;
 
 .form{
   padding: 5%;
-  margin-left:2%; 
+  margin-left:2%;
   position: center;
   border-radius: 40px;
   background: #FFF9B1;
@@ -83,24 +83,25 @@ p {
       <h1>KIDSTOON</h1>
       <h5>Sistem hiburan berbasis edukasi</h5>
 
-   </section> 
+   </section>
     </div>
 
     <div class="row">
 
   <div class="col-xs-6 col-md-4">
   </div>
-  
+
   <div class="col-xs-6 col-md-4">
     <section class="form" id="form">
-        <form class="form-signin" action="prosesdaftar.php" method="post">
+        <form class="form-signin" action="/register" method="post">
+            @csrf
             <input id="name" placeholder="Name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
 
                     @if ($errors->has('name'))
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $errors->first('name') }}</strong>
                         </span>
-                    @endif 
+                    @endif
             <br>
 
             <input id="email" placeholder="Email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
@@ -129,7 +130,7 @@ p {
                                     {{ __('Register') }}
                                 </button>
         </form> <br>
-        <p> BACK TO <a href="index.php">LOGIN</a></p>
+        <p> BACK TO <a href="/login">LOGIN</a></p>
     </section>
         </div>
 
