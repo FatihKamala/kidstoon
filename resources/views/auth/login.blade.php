@@ -93,10 +93,10 @@ p {
 
       <div class="col-xs-6 col-md-4">
         <section class="form" id="form">
-          <form class="form-signin" action="{{ route('login') }}" method="post">
+          <form class="form-signin" action="/login" method="post">
             @csrf
-                  <p>Username</p>
-                  <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+                  <p>E-mail</p>
+                  <input id="email" type="text" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
 
                                     @if ($errors->has('email'))
                                         <span class="invalid-feedback" role="alert">

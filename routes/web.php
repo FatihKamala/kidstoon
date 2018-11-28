@@ -18,4 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/home/{id}', 'HomeController@listvideo')->name('home');
+Route::get('/home/{id}', 'HomeController@listvideo')->name('home.detail');
+Route::resource('parentmode', 'ParentModeController');
+Route::resource('verifikasi', 'VerifikasiController');
+

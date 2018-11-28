@@ -114,7 +114,7 @@ ul li{
 
 	        </li>
 	        <li>
-	            <a href="parentconfirm.php"><button type="button" class="btn btn-block">PARENT MODE</button></a>
+	            <a href="/verifikasi"><button type="button" class="btn btn-block">PARENT MODE</button></a>
 									<a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

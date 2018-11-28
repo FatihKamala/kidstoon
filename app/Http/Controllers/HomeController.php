@@ -29,8 +29,6 @@ class HomeController extends Controller
     public function listvideo($id)
     {
         $link = DB::table('listvideo')->get();
-        //$link= 'nyoba bos';
-        //$link = ['fatih ', 'Kamala ', 'Nurika'];
         return view('utama',['link'=>$link]);
     }
 }
