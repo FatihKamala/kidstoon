@@ -26,9 +26,11 @@ class HomeController extends Controller
     {
         return view('home');
     }
-    public function listvideo($id)
+    public function listvideo(Request $request)
     {
-        $link = DB::table('listvideo')->get();
+        $kategori = $request->query('kt1');
+        $link = DB::table('listvideo')->select('link')->where('judul', 'LIKE', '%'.$kategori.'%')->get();
+
         return view('utama',['link'=>$link]);
     }
 }

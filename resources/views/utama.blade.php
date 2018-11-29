@@ -102,8 +102,12 @@ ul li{
 			<div class="container">
 				@foreach ($link as $linkvideo) 
     			<iframe width="540" height="320" src="{{$linkvideo->link}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    			@endforeach
+    	  @endforeach
+
 			</div>
+      <div>
+        
+      </div>
 		</div>
 	</div>
 	<div class="col-md-2 d-none d-sm-block">

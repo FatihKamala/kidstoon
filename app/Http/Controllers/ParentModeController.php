@@ -21,7 +21,7 @@ class ParentModeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function setKategori()
+    public function setKategori(Request $request)
     {
         $kategori = $_GET['kt'];
         $selected = "";
@@ -30,7 +30,7 @@ class ParentModeController extends Controller
         }
         $selected = substr($selected, 0, -1);
 
-        echo "#selected";
+        Route::get('home/{$selected}', 'HomeController@listvideo')->name('home.detail');
     }
 
     public function create()
@@ -92,5 +92,12 @@ class ParentModeController extends Controller
     public function destroy($id)
     {
         //
+    }
+    public function search(Request $request)
+    {
+        $search = $request->get('kt1');
+        $result = DB::where('judul', 'LIKE', '%'.$search.'%')->piganate(10);
+
+        return view('utama', compact('search', 'result'));
     }
 }
